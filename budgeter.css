@@ -1,0 +1,370 @@
+body
+{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background: rgb(238, 206, 165);
+    width: 100%;
+}
+
+.btn-help
+{
+    position: absolute;
+    background: ghostwhite;
+    color: brown;
+    border-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    margin-top: 20px;
+    margin-left: 90%;
+}
+
+.btn-help:hover
+{
+    font-size: larger;
+    border-color: burlywood;
+    background: rgb(241, 241, 255);
+    border-color: ghostwhite;
+}
+
+.btn-help:active
+{
+    position: absolute;
+    background: ghostwhite;
+    color: brown;
+    border-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    margin-top: 20px;
+    margin-left: 90%;
+}
+
+.modal-title
+{
+    text-align: center;
+    margin-left: 15%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-transform: uppercase;
+    color: brown;
+}
+
+.top-close-modal
+{
+    background: ghostwhite;
+    color: burlywood;
+    opacity: 20%;
+}
+
+.top-close-modal:hover
+{
+    background: ghostwhite;
+    color: burlywood;
+    opacity: 20%;
+}
+
+.help-header
+{
+    color: brown;
+}
+
+.help-rule
+{
+    color: brown;
+}
+
+.help-title
+{
+    color: burlywood;
+}
+
+.help-inc
+{
+    color: green;
+}
+
+.help-exp
+{
+    color: red;
+}
+
+.close-help
+{
+    background: brown;
+    color: ghostwhite;
+    width: fit-content;
+    margin-right: 45%;
+    border-color: ghostwhite;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.close-help:hover
+{
+    text-decoration: none;
+    color: ghostwhite;
+    background: burlywood;
+}
+
+.budgeter-title-section
+{
+    background: url(../img/black-ball-point-pen-with-brown-spiral-notebook-733852.jpg); 
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.budgeter-header
+{
+    padding: 30px;
+}
+
+.budgeter-title .budgeter-time
+{
+    color: rgb(255, 255, 255);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: larger;
+    padding: 2%;
+    
+}
+
+.budget-value
+{
+    color: rgb(94, 41, 41);
+    background: rgb(255, 255, 255);
+    width: fit-content;
+    border: 1px solid brown;
+    padding: 5px;
+}
+
+.budgeter-title .cash-bal
+{
+    color: ghostwhite;
+}
+
+.button-green button
+{
+    background: green;
+    color: ghostwhite;
+    width: 350px;
+    margin-bottom: 5px;
+}
+
+.button-red button
+{
+    background: red;
+    color: ghostwhite;
+    width: 350px;
+    margin-top: 5px;
+}
+
+.btn-detail
+{
+    float: left;
+
+}
+
+.budget-inc-val
+{
+    float: right;
+    position: absolute;
+    margin-right: 40px;
+}
+
+.budget-exp-val
+{
+    float: right;
+    position: absolute;
+    margin-right: 60px;
+    padding-top: 5px;
+}
+
+i .budget-percent
+{
+    margin-left: 20px;
+}
+
+.budget-exp-percentage
+{
+    border: 1px solid darkred;
+    padding: 3px;
+    float: right;
+    margin-left: 200px;
+    position: relative;
+}
+
+.form
+{
+    background: brown;
+    padding: 5px;
+}
+
+.numb-block
+{
+    width: 50px;
+}
+
+.desc-block
+{
+    width: 250px;
+}
+
+.value-block
+{
+    width: 100px;
+}
+
+/* button .btn-check */
+
+.btn-check
+{
+    border: 2px solid green;
+    border-radius: 50%;
+    height: 30px;
+    font-size: smaller;
+    background: white;
+    color: green;
+    margin: 10px;
+}
+
+.contain
+{
+    /* background: rgb(174, 174, 207); */
+    width: 100%;
+}
+
+section
+{
+    padding: 20px;
+}
+
+.budget-income
+{
+    padding: 1%;
+    margin-top: 40px;
+}
+
+.budget-income h6
+{
+    color: green;
+    font-weight: bold;
+    margin-bottom: 20px;
+    border-bottom: 1px solid purple; 
+}
+
+.income-list .income-items
+{
+    margin-top: 5px;
+}
+
+.income-items .item-description
+{
+    text-transform: inline;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border-bottom: 1px solid green;
+    color: black;
+    padding: 10px;
+    /* margin-right: 5px;   */
+    
+}
+
+.item-description .desc-title
+{
+    float: left;
+    position: absolute;
+}
+
+.income-items .item-value
+{
+    margin-left: 50%;
+    padding: 5px;
+}
+
+.income-items .item-delete
+{
+    color: rgb(255, 255, 255);
+    background: rgb(255, 255, 255);
+    border-radius: 50%;
+    margin-left: 7px;
+    padding-top: 2px;
+    border: 3px solid rgb(255, 255, 255);
+    color: rgb(225, 225, 230);
+    display: none;
+}
+
+.income-items .item-delete:hover
+{
+    /* color: rgb(255, 255, 255);
+    background: lightgreen;  */
+    color: rgb(255, 0, 0);
+    background: rgb(34, 255, 0);
+}
+
+.budget-expenses
+{
+    padding: 1%;
+    margin-top: 40px;
+}
+
+.budget-expenses h6
+{
+    color: red;
+    font-weight: bold;
+    margin-bottom: 20px;
+    border-bottom: 1px solid purple; 
+}
+
+.expense-list .expense-items
+{
+    margin-top: 5px;
+}
+
+.expense-items .item-description
+{
+    text-transform: inline;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border-bottom: 1px solid red;
+    color: black;
+    padding: 10px;
+    /* margin-right: 5px;   */
+    
+}
+
+.item-description .desc-title
+{
+    float: left;
+    position: absolute;
+}
+
+.expense-items .item-value
+{
+    margin-left: 50%;
+    padding: 5px;
+}
+
+.item-percentage
+{
+    background: rgb(247, 80, 80);
+    color: whitesmoke;
+    padding: 5px;
+    border: 1PX solid green;
+    margin-left: 3px;
+}
+
+.expense-items .item-delete
+{
+    color: rgb(210, 221, 210);
+    background: rgb(255, 255, 255);
+    border-radius: 50%;
+    margin-left: 10px;
+    border: 3px solid rgb(255, 255, 255);
+    display: none;
+}
+
+.expense-items .item-delete:hover
+{
+    color: rgb(255, 0, 0);
+    background: rgb(34, 255, 0);
+}
+
+.item-value:hover
+{
+    font-size: larger;
+    border: 1px solid green;
+}
+

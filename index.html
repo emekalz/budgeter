@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compactible" content="ie=edge" content="IE=7">
+    <meta name="author" content="Chukwuemeka-Olobi-Isiolu">
+    <meta name="keywords" content="dependent (edit content according to system use)">
+    <meta name="tools" tabindex="HTML 5, PHP 8, Bootstrap 4, SCSS, CSS, Jquery, PHP AJAX, JSON, Vue, Materialised Vue, JavaScript">
+
+    <title>Budgetseeker</title>
+
+    <link rel="shortcut icon" type="image/logo" href="img/finance.jpg">
+
+    
+    <!-- Bootstrap Stylesheets --> 
+    <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap-grid.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap-reboot.css">
+
+    
+    <!-- SCSS Tools -->
+     <link rel="stylesheet" type="text/scss" href="css/scss/bootstrap-grid.scss">
+     <link rel="stylesheet" type="text/scss" href="css/scss/bootstrap-reboot.scss">
+     <link rel="stylesheet" type="text/scss" href="css/scss/bootstrap.scss">
+
+     
+    <!-- Font-awesome Stylesheets -->
+    <link rel="stylesheet" type="text/css" href="fontawesome/css/fontawesome.css">
+    <link rel="stylesheet" type="text/css" href="fontawesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="fontawesome/css/regular.css">
+    <link rel="stylesheet" type="text/css" href="fontawesome/css/solid.css">
+    <link rel="stylesheet" type="text/css" href="fontawesome/css/svg-with-js.css">
+    <link rel="stylesheet" type="text/css" href="fontawesome/css/v4-shims.css">
+
+    
+    <!-- Font-awesome Less -->
+    <link rel="stylesheet" type="text/less" href="fontawesome/less/fontawesome.less">
+    <link rel="stylesheet" type="text/less" href="fontawesome/less/brands.less">
+    <link rel="stylesheet" type="text/less" href="fontawesome/less/regular.less">
+    <link rel="stylesheet" type="text/less" href="fontawesome/less/solid.less">
+    <link rel="stylesheet" type="text/less" href="fontawesome/less/v4-shims.less">
+
+
+    <!-- Font-awesome Scss -->
+    <link rel="stylesheet" type="text/scss" href="fontawesome/scss/brands.scss">
+    <link rel="stylesheet" type="text/scss" href="fontawesome/scss/fontawesome.scss">
+    <link rel="stylesheet" type="text/scss" href="fontawesome/scss/regular.scss">
+    <link rel="stylesheet" type="text/scss" href="fontawesome/scss/solid.scss">
+    <link rel="stylesheet" type="text/scss" href="fontawesome/scss/v4-shims.scss">
+
+
+    <!-- my-styleshhets -->
+    <link rel="stylesheet" type="text/css" href="css/animate.css">
+    <link rel="stylesheet" type="text/css" href="css/budgeter.css">
+
+  
+</head>
+<body>
+    
+    <div class="budgeter-title-section">
+
+
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title" id="myModalLabel">
+                    Welcome to budget-seeker 
+                  </h4>
+                  <button type="button" class="close top-close-modal" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <br>
+                <!-- Help Details-->
+                <div class="container">
+                    <div class="help-1">
+                        <h5 class="help-header">
+                            <center>
+                            Automatically Calculates your what's left of your total budget after expenses
+                            </center> 
+                        </h5>
+                        <br>
+                        <p class="help-rule">
+                            To get a result, put in all your income values first before enter your expenses
+                        </p>
+                    </div>
+
+                    <div class="help-2">
+                        <div class="help-title">
+                            Note:
+                        </div>
+                        <p class="help-inc">
+                            '+' is for income
+                        </p>
+                        
+                        <p class="help-exp">
+                            '-' is for expenses
+                        </p>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                  <button type="button" class="btn-block btn-sm close-help" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="help-btn">
+            <button type="button" class="btn-help btn-sm" data-toggle="modal" data-target="#myModal">
+              <i class="fa fa-question"></i>
+            </button>
+        </div>
+<!-- ------------------------------------------------------------------------- -->
+        
+
+
+
+
+        <div class="budgeter-header">
+            <div class="budgeter-title">
+            <center>
+                <h6 class="budgeter-time">
+                    Available budget in <span class="budget-title-month"> %Month%</span> 
+                </h6>
+                <br>
+                <h3 class="budget-value">
+                    000
+                </h3>
+                <br>
+
+                <div class="button-green">
+                    <button type="button" class="btn btn-md inc">
+                       <span class="btn-detail">Income</span>  
+                       <span class="btn-digit budget-inc-val"> + 0,000.00 
+                            <!-- <i class="bal-percentage ml-2">10%</i> -->
+                        </span>
+
+                    </button>
+                </div>
+                
+
+                <div class="button-red">
+                    <button type="button" class="btn btn-md exp">
+                        <span class="btn-detail">Expenses</span> 
+                        <span class="btn-digit budget-exp-val mr-3">-0,000.00 </span>
+                            <i class="budget-percent budget-exp-percentage ml-3"> 0%</i>               
+                    </button>
+                </div>
+            </center>
+            </div>
+        </div>
+    </div>
+    
+
+    <!-- Container section -->
+    <div class="contain">
+        <center>
+            <div class="form"> 
+                
+                <select name="add-type" id="add-type" class="add-type">
+                    <option value="inc" selected>+</option>
+                    <option value="exp">-</option>
+                </select>
+                
+                <!-- <input type="number" class="numb-block" id="numbBlock" name="numb">                   
+                </input> -->
+
+                <input type="text" class="desc-block" id="descBlock" name="descBlock" placeholder="add description">
+
+                <input type="text" class="value-block" id="valueBlock" name="valueBlock" placeholder="value">
+
+                <button type="button" class="btn btn-sm btn-check" id="btn-check"><i class="fas fa-check"></i></button>
+            </div>
+        </center>
+
+        <section class="table">    
+            <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 ">
+                    <div class="budget-income">
+                        <h6 class="income">
+                            INCOME  
+                        </h6>
+                        <div class="income-list" id="income-1">
+
+                            
+                            <!-- For JSON Display -->
+                            <!-- <div class="income-items" id="inc-%id%">
+                                <div class="item-description">
+                                    <span class="desc-title">
+                                        %description%
+                                    </span>
+                                    <span class="item-value">
+                                        %value%
+                                    </span>
+                                    <span class="button">
+                                        <button type="submit" class="item-delete btn btn-sm"> 
+                                            <i class="fa fa-close"></i>
+                                        </button>
+                                    </span>
+                                </div>
+                            </div> -->
+                            <!-- For JSON Display -->
+                            
+
+
+                        </div>
+
+                        <!-- 
+                        <div class="table">
+                            <tr>
+                                
+                            </tr>
+                        </div> -->
+                        
+                    </div>  
+                </div>
+
+                <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6">
+                    <div class="budget-expenses">
+                        <h6 class="expenses">
+                            EXPENSES  
+                        </h6>
+                        
+                        <div class="expense-list" id="expense-1">
+
+                             <!-- For JSON Display -->
+                            <!-- <div class="expense-items" id="exp-%id%">
+
+                                <div class="item-description">
+                                    <span class="desc-title">
+                                        %description%
+                                    </span>
+                                    <span class="item-value">
+                                        %value%
+                                    </span>
+                                    <span class="item-percentage">
+                                        21%
+                                    </span>
+                                    <span class="button">
+                                        <button type="submit" class="item-delete"> 
+                                            <i class="fa fa-close"></i>
+                                        </button>
+                                    </span>
+                                </div>
+                            </div> -->
+                       
+                                <!-- For JSON Display -->
+
+
+                            
+                        </div> 
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div> 
+    
+    
+
+      <!-- main-jquery and other interactive scripts here -->
+      <script src="js/jquery.js"></script>
+      <script src="js/budgeter.js"></script>
+      <script src="js/npm.js"></script>
+
+      <!-- bootstrap-scripts -->
+
+      <script src="js/alert.js"></script>
+      <script src="js/bootstrap.bundle.js"></script>
+      <script src="js/bootstrap.js"></script>
+      <script src="js/button.js"></script>
+      <script src="js/carousel.js"></script>
+      <script src="js/collapse.js"></script>
+      <script src="js/dropdown.js"></script>
+      <script src="js/index.js"></script>
+      <script src="js/modal.js"></script>
+      <script src="js/popover.js"></script>
+      <script src="js/sanitizer.js"></script>
+      <script src="js/scrollspy.js"></script>
+      <script src="js/tab.js"></script>
+      <script src="js/toast.js"></script>
+      <script src="js/tooltip.js"></script>
+      <script src="js/util.js"></script>
+      <script src="js/emyscript.js"></script>
+
+                    
+      
+      <!-- Linked-fontawesome-Scripts -->
+
+      <script src="fontawesome/js/fontawesome.js"></script>
+      <script src="fontawesome/js/all.js"></script>
+      <script src="fontawesome/js/brands.js"></script>
+      <script src="fontawesome/js/conflict-detection.js"></script>
+      <script src="fontawesome/js/regular.js"></script>
+      <script src="fontawesome/js/solid.js"></script>
+      <script src="fontawesome/js/v4-shims.js"></script>
+      
+</body>
+</html>
